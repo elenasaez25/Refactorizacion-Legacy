@@ -4,23 +4,27 @@
  */
 public class FacturacionLegacy {
 
-    // Método a refactorizar
-    public double cT(double m, int tC, boolean dV) {
-        if (m > 0) {
-            if (tC == 1) {
-                if (dV == true)
-                    return m - (m * 0.25);
-                else
-                    return m - (m * 0.15);
-            } else {
-                if (tC == 2) {
-                    return m - (m * 0.05);
-                } else {
-                    return m;
-                }
-            }
-        } else {
-            return 0;
+    private static final double DESCUENTO_VIP = 0.25;
+    private static final double DESCUENTO_ESTANDAR = 0.15;
+    private static final double DESCUENTO_SECUNDARIO = 0.05;
+
+    private static final int TIPO_CLIENTE_PREMIUM = 1;
+    private static final int TIPO_CLIENTE_SECUNDARIO = 2;
+    
+    // Método refactorizado con las nuevas variables declaradas arriba:
+    public double calcularTotal(double importeBase, int tipoCliente, boolean esSocioVip) {
+
+        if (importeBase <= 0) return 0;
+
+        if (tipoCliente == TIPO_CLIENTE_PREMIUM) {
+            if (esSocioVip) return importeBase - (importeBase * DESCUENTO_VIP);
+            return importeBase - (importeBase * DESCUENTO_ESTANDAR);
         }
+
+        if (tipoCliente == TIPO_CLIENTE_SECUNDARIO) {
+            return importeBase - (importeBase * DESCUENTO_SECUNDARIO);
+        }
+
+        return importeBase;
     }
 }
