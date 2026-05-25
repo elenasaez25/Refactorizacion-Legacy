@@ -6,8 +6,12 @@
 
 En este README comento los cambios realizados sobre el método `cT` de la clase `FacturacionLegacy.java`. El objetivo ha sido eliminar la deuda técnica sin alterar el comportamiento funcional del código, refactorizándolo.
 
----
-
+--- 
+## Tres grandes problemas del código antiguo:  
+1. **Números mágicos:** Valores como 0.25 o 0.15 están hardcodeados sin ningún contexto.
+2. **Variables sin significado:** Nombres como `cT, m, tC o dV` no dicen nada. Obligan a adivinar qué representan.
+3. **Código Spaghetti:** La anidación de múltiples `if-else` crea una estructura de forma de flecha **>** que hace casi imposible seguir la lógica del algoritmo.
+   
 ## Cambios Realizados
 
 ### 1. Renombrado de variables y método
