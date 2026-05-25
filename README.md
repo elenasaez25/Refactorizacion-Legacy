@@ -4,7 +4,8 @@
 
 ## Descripción
 
-En este README comento los cambios realizados sobre el método `cT` de la clase `FacturacionLegacy.java`. El objetivo ha sido eliminar la deuda técnica sin alterar el comportamiento funcional del código, refactorizándolo.
+En este README comento los cambios realizados sobre el método `cT` de la clase `FacturacionLegacy.java`. El objetivo ha sido eliminar la deuda técnica sin alterar el comportamiento funcional del código, refactorizándolo.  
+**Nota importante:** Mi análisis de la lógica del código refactorizado está comentada **DENTRO** del Commit de refactorización, no en el código.
 
 --- 
 ## Tres grandes problemas del código antiguo:  
