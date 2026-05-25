@@ -55,10 +55,10 @@ Se ha eliminado por completo la anidación de bloques `if-else`, reduciendo la c
 Se ha añadido el documento JavaDoc sobre el método `calcularTotal` que documenta:
 
 - **Propósito** del método.
-- **`@param importeBase`** — importe bruto de la transacción.
-- **`@param tipoCliente`** — tipo de cliente (1 = Premium, 2 = Secundario).
-- **`@param esSocioVip`** — si el cliente tiene condición VIP.
-- **`@return`** — importe final tras descuento, o `0` si el importe no es válido.
+- **`@param importeBase`**: importe bruto de la transacción.
+- **`@param tipoCliente`**: tipo de cliente (1 = Premium, 2 = Secundario).
+- **`@param esSocioVip`**: si el cliente tiene condición VIP.
+- **`@return`**: importe final tras descuento, o `0` si el importe no es válido.
 
 ---
 
